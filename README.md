@@ -5,9 +5,9 @@ Repositório dedicado ao Trabalho final da matéria Inteligencia Artificial, 202
 
 ## Integrantes
 
-- Nome do Aluno 1 - RA: XXXXXXXX
-- Nome do Aluno 2 - RA: XXXXXXXX
-- Nome do Aluno 3 - RA: XXXXXXXX
+- Vinicius Reginaldo Ferrarini — RA: 23159293-2 
+- Pedro Alvaro Mantuani Silva  — RA: 23079477-2 
+- Luiz Henrique Peschieira Romano  — RA: 25363238-2
 
 ---
 
