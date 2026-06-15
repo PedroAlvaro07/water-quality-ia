@@ -141,38 +141,49 @@ Para avaliar o desempenho dos modelos, foram utilizadas as seguintes métricas p
 ### Resultados — Naive Bayes
 
 ```
+=== Resultados — Naive Bayes ===
+Acurácia:  0.8444 (84.44%)
+Precisão:  0.4169
+Recall:    0.6150
+F1-Score:  0.4970
+
+=== Relatório Completo ===
               precision    recall  f1-score   support
 
-           0       0.XX      0.XX      0.XX      XXXX
-           1       0.XX      0.XX      0.XX      XXXX
+ Não Potável       0.94      0.88      0.91      1400
+     Potável       0.42      0.61      0.50       200
 
-    accuracy                           0.XX      XXXX
+    accuracy                           0.84      1600
+   macro avg       0.68      0.75      0.70      1600
+weighted avg       0.88      0.84      0.86      1600
 ```
-
-> ⚠️ *Nota: os valores acima serão preenchidos com os resultados reais após o treinamento.*
 
 ### Resultados — Rede Neural Artificial
 
 ```
+=== Resultados — Rede Neural Artificial ===
+Acurácia:  0.9456 (94.56%)
+Precisão:  0.8266
+Recall:    0.7150
+F1-Score:  0.7668
+
+=== Relatório Completo ===
               precision    recall  f1-score   support
 
-           0       0.XX      0.XX      0.XX      XXXX
-           1       0.XX      0.XX      0.XX      XXXX
+ Não Potável       0.96      0.98      0.97      1400
+     Potável       0.83      0.71      0.77       200
 
-    accuracy                           0.XX      XXXX
+    accuracy                           0.95      1600
+   macro avg       0.89      0.85      0.87      1600
+weighted avg       0.94      0.95      0.94      1600
 ```
-
-> ⚠️ *Nota: os valores acima serão preenchidos com os resultados reais após o treinamento.*
 
 ### Gráficos de Avaliação
 
-> ⚠️ *Os gráficos abaixo serão gerados e inseridos após a execução do código. Estão planejados:*
->
-> 1. **Matriz de Confusão — Naive Bayes**
-> 2. **Matriz de Confusão — RNA**
-> 3. **Curva de Acurácia por Época (treino vs. validação) — RNA**
-> 4. **Curva de Perda por Época (treino vs. validação) — RNA**
-> 5. **Gráfico comparativo de métricas (Acurácia, Precisão, Recall, F1) entre os dois modelos**
+> 1. ![Matriz de Confusão - Naive Bayes](graficos/matriz_confusao_nb.png)
+> 2. ![Matriz de Confusão - RNA](graficos/matriz_confusao_rna.png)
+> 3. ![Curva de Acurácia - RNA](graficos/curva_acuracia_rna.png)
+> 4. ![Curva de Perda - RNA](graficos/curva_perda_rna.png)
 
 ---
 
@@ -180,12 +191,12 @@ Para avaliar o desempenho dos modelos, foram utilizadas as seguintes métricas p
 
 | Métrica | Naive Bayes | Rede Neural (RNA) |
 |---|---|---|
-| Acurácia | XX% | XX% |
-| Precisão | XX% | XX% |
-| Recall | XX% | XX% |
-| F1-Score | XX% | XX% |
+| Acurácia | 84% | 94% |
+| Precisão | 41% | 82% |
+| Recall | 61% | 71% |
+| F1-Score | 49% | 76% |
 
-> ⚠️ *Tabela será atualizada com os resultados reais após o treinamento.*
+![Comparativo dos Modelos](graficos/comparativo_modelos.png)
 
 ### Análise Comparativa
 
@@ -193,7 +204,7 @@ O Naive Bayes, por assumir independência entre as features e distribuição gau
 
 A Rede Neural Artificial, por sua vez, é capaz de aprender representações hierárquicas e relações não-lineares entre as variáveis, o que tende a resultar em melhor capacidade de generalização para problemas complexos como este. O custo é um maior tempo de treinamento e necessidade de ajuste de hiperparâmetros.
 
-A comparação final entre os modelos será baseada principalmente na **acurácia** e no **F1-Score**, pois em um contexto de potabilidade da água, tanto os falsos positivos (classificar água contaminada como segura) quanto os falsos negativos (descartar água segura) têm impacto relevante.
+A comparação final entre os modelos foi baseada principalmente na **acurácia** e no **F1-Score**, pois em um contexto de potabilidade da água, tanto os falsos positivos (classificar água contaminada como segura) quanto os falsos negativos (descartar água segura) têm impacto relevante.
 
 ---
 
@@ -203,7 +214,7 @@ Este trabalho demonstrou o processo completo de desenvolvimento de uma solução
 
 A escolha do dataset "Water Quality" se mostrou adequada ao problema, por conter atributos físico-químicos reais e uma variável alvo bem definida (potável ou não potável), tornando o problema diretamente aplicável ao contexto de saúde pública e ambiental.
 
-> ⚠️ *A conclusão final com análise dos resultados numéricos será completada após o treinamento dos modelos.*
+Os resultados obtidos confirmaram a hipótese inicial: a RNA alcançou 94,44% de acurácia contra 84,44% do Naive Bayes, demonstrando maior capacidade de capturar as relações não-lineares entre os atributos físico-químicos da água. O F1-Score da RNA (0,76) também superou significativamente o do Naive Bayes (0,49), indicando melhor equilíbrio entre precisão e recall.
 
 ---
 
